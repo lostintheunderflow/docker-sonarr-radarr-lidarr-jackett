@@ -26,9 +26,9 @@ RUN \
 
 # Radarr && lidarr
 RUN \
- echo "****************************"
- echo "****** Getting radarr ******"
- echo "****************************"
+ echo "****************************" && \
+ echo "****** Getting radarr ******" && \
+ echo "****************************" && \
  radarr_url=$(curl "http://radarr.aeonlucid.com/v1/update/${RADARR_BRANCH}/changes?os=linux" \
     | jq -r '.[0].url') && \
  mkdir -p \
@@ -38,10 +38,10 @@ RUN \
     "${radarr_url}" && \
  tar ixzf \
  /tmp/radar.tar.gz -C \
-    /opt/radarr --strip-components=1
- echo "****************************"
- echo "****** Getting lidarr ******"
- echo "****************************"
+    /opt/radarr --strip-components=1  && \
+ echo "****************************"  && \
+ echo "****** Getting lidarr ******"  && \
+ echo "****************************"  && \
  mkdir -p /app/lidarr && \
  lidarr_url=$(curl "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
     | jq -r '.[0].url') && \
@@ -50,10 +50,10 @@ RUN \
     "${lidarr_url}" && \
  tar ixzf \
  /tmp/lidarr.tar.gz -C \
-    /app/lidarr --strip-components=1
- echo "****************************"
- echo "****** Getting jackett ******"
- echo "****************************"
+    /app/lidarr --strip-components=1 && \
+ echo "****************************" && \
+ echo "****** Getting jackett ******" && \
+ echo "****************************" && \
  mkdir -p \
     /app/Jackett && \
  jack_tag=$(curl -sX GET "https://api.github.com/repos/Jackett/Jackett/releases/latest" \
@@ -78,5 +78,8 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 7878 8686 8989
+EXPOSE 7878
+EXPOSE 8686
+EXPOSE 8989
+EXPOSE 9117
 VOLUME /config /downloads /tv /movies /music
