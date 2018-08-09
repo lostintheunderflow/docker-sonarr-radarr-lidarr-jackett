@@ -68,7 +68,7 @@ RUN \
  chown -R root:root /app/Jackett
 
 RUN \
- echo "**** clean up ****"
+ echo "**** clean up ****"  && \
  rm -rf \
     /tmp/* \
     /var/lib/apt/lists/* \
