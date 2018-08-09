@@ -1,11 +1,12 @@
 [linuxserverurl]: https://linuxserver.io
 # Description
-Mix of [LinuxServer.io][linuxserverurl] (Sonarr, Radarr, Lidarr, Jackett) into one container.
+Mix of [LinuxServer.io][linuxserverurl] (Sonarr, Radarr, Lidarr, Jackett) into one container using arm versions.
 
 ## Usage
 ```
 CONFIG="/home/osmc/Docker/configs" #folder for storing configurations
 DISK="/mnt/superbig" #target folder for downloads, movies, tv, music
+docker build -t mediamanager .
 docker create \
  --restart=unless-stopped \
  -d \
@@ -22,5 +23,5 @@ docker create \
  -v ${DISK}/Films:/movies \
  -v ${DISK}/Musique:/music \
  --name=mediamanager \
- lsioarmhf/sonarr:latest
+ mediamanager
 ```
