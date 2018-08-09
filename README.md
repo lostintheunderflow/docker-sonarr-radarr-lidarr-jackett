@@ -10,7 +10,7 @@ docker build -t mediamanager .
 docker run \
  --restart=unless-stopped \
  -d \
- -e PUID=1000 -e PGID=1000 \
+ -e PUID=0 -e PGID=0 \
  -e TZ=Europe/Paris \
  -p 7878:7878 \
  -p 8686:8686 \

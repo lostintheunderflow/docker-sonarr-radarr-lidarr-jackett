@@ -21,6 +21,7 @@ RUN \
  echo "deb http://apt.sonarr.tv/ master main" > \
     /etc/apt/sources.list.d/sonarr.list && \
  apt-get update && \
+ apt-get dist-upgrade -y && \
  apt-get install -y \
  nzbdrone \
  jq
