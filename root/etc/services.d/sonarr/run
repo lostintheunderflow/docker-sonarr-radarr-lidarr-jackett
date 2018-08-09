@@ -6,4 +6,4 @@ cd /opt/NzbDrone || exit
 
 exec \
 	s6-setuidgid abc mono --debug NzbDrone.exe \
-	-nobrowser -data=/config
+	-nobrowser -data=/config/sonarr

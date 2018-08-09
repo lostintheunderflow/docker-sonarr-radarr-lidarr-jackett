@@ -6,9 +6,7 @@
 
 # permissions
 chown -R abc:abc \
-    /app/lidarr \
-    /NzbDrone \
-    /config \
-    /opt \
     /app \
-    /downloads
+    /config \
+    /downloads \
+    /opt \

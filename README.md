@@ -7,7 +7,7 @@ Mix of [LinuxServer.io][linuxserverurl] (Sonarr, Radarr, Lidarr, Jackett) into o
 CONFIG="/home/osmc/Docker/configs" #folder for storing configurations
 DISK="/mnt/superbig" #target folder for downloads, movies, tv, music
 docker build -t mediamanager .
-docker create \
+docker run \
  --restart=unless-stopped \
  -d \
  -e PUID=1000 -e PGID=1000 \
