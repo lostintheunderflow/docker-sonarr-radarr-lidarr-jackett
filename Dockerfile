@@ -52,7 +52,8 @@ RUN \
     "${lidarr_url}" && \
  tar ixzf \
  /tmp/lidarr.tar.gz -C \
-    /app/lidarr --strip-components=1 && \
+    /app/lidarr --strip-components=1 && 
+
 RUN \
  echo "**** clean up ****"  && \
  rm -rf \
