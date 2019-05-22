@@ -8,5 +8,5 @@
 chown -R abc:abc \
     /app \
     /config \
-    /downloads \
+    /data \
     /opt \

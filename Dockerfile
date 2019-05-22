@@ -69,4 +69,4 @@ EXPOSE 7878
 EXPOSE 8686
 EXPOSE 8989
 EXPOSE 9117
-VOLUME /config /downloads /tv /movies /music
+VOLUME /config /data /tv /movies /music

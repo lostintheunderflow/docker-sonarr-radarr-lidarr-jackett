@@ -18,7 +18,7 @@ docker run \
  -p 9117:9117 \
  -v /etc/localtime:/etc/localtime:ro \
  -v ${CONFIG}:/config \
- -v ${DISK}/Torrents:/downloads \
+ -v ${DISK}/Torrents:/data \
  -v ${DISK}/Séries:/tv \
  -v ${DISK}/Films:/movies \
  -v ${DISK}/Musique:/music \
